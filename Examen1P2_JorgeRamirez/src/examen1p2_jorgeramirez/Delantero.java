@@ -10,12 +10,12 @@ import java.util.Random;
  *
  * @author Jorge Ramirez
  */
-public class MedioCampista extends Jugador {
+public class Delantero extends Jugador {
 
-    public MedioCampista(String nombre, int edad, String nacionalidad, String pieHabil, String equipo) {
+    public Delantero(String nombre, int edad, String nacionalidad, String pieHabil, String equipo) {
         super(nombre, edad, nacionalidad, pieHabil, equipo);
     }
-
+    
     @Override
     public void fisico() {
         this.fisico = generarCaracteristicaAleatoria(6, 13);
@@ -33,17 +33,17 @@ public class MedioCampista extends Jugador {
 
     @Override
     public void ritmo() {
-       this.ritmo = generarCaracteristicaAleatoria(6, 13);
+       this.ritmo = generarCaracteristicaAleatoriaConLimite(13, 70, 100);
     }
 
     @Override
     public void vision() {
-         this.vision = generarCaracteristicaAleatoriaConLimite(13, 70, 100);
+         this.vision = generarCaracteristicaAleatoria(6, 13);
     }
 
     @Override
     public void passing() {
-        this.passing = generarCaracteristicaAleatoriaConLimite(13, 70, 100);
+        this.passing = generarCaracteristicaAleatoria(6, 13);
     }
 
     @Override
@@ -54,7 +54,7 @@ public class MedioCampista extends Jugador {
 
     @Override
     public void disparo() {
-        this.disparo = generarCaracteristicaAleatoria(6, 13);
+        this.disparo = generarCaracteristicaAleatoriaConLimite(13, 70, 100);
     }
 
     @Override

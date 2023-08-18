@@ -18,12 +18,12 @@ public class Portero extends Jugador {
 
     @Override
     public void fisico() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.fisico = generarCaracteristicaAleatoria(6, 13);
     }
 
     @Override
     public void agarre() {
-        this.agarre = generarCaracteristicaAleatoria(6, 13);
+        this.agarre = generarCaracteristicaAleatoriaConLimite(13, 70, 100);
     }
 
     @Override
@@ -33,49 +33,49 @@ public class Portero extends Jugador {
 
     @Override
     public void ritmo() {
-       
+       this.ritmo = generarCaracteristicaAleatoria(6, 13);
     }
 
     @Override
     public void vision() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+         this.vision = generarCaracteristicaAleatoria(6, 13);
     }
 
     @Override
     public void passing() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.passing = generarCaracteristicaAleatoriaConLimite(13, 70, 100);
     }
 
     @Override
     public void rating() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    int res = (this.fisico + this.agarre + this.disparo + this.entrada + this.lanzamiento + this.passing + this.ritmo + this.regate + this.vision) / 9;
+    this.rating = res;
     }
 
     @Override
     public void disparo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.disparo = generarCaracteristicaAleatoria(6, 13);
     }
 
     @Override
     public void lanzamiento() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.lanzamiento = generarCaracteristicaAleatoriaConLimite(13, 70, 100);
     }
 
     @Override
     public void regate() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.regate = generarCaracteristicaAleatoria(6, 13);
     }
 
-    private int generarCaracteristicaAleatoria(int limit, int multiplier) {
+    private int generarCaracteristicaAleatoria(int limit, int multip) {
         Random random = new Random();
         int numRand = random.nextInt(limit);
-        return numRand * multiplier;
+        return numRand * multip;
     }
 
     private int generarCaracteristicaAleatoriaConLimite(int limit, int min, int max) {
         boolean vf = true;
         int res = 0;
-
         while (vf) {
             res = generarCaracteristicaAleatoria(limit, 12);
             if (res >= min && res < max) {
