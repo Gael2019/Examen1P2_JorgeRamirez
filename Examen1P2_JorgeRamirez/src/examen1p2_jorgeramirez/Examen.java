@@ -391,6 +391,12 @@ public class Examen extends javax.swing.JFrame {
             }
         });
 
+        comboequipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboequipoActionPerformed(evt);
+            }
+        });
+
         BotonAddEstadio.setText("Agregar");
         BotonAddEstadio.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -418,12 +424,13 @@ public class Examen extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(33, 33, 33)
                                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(AgregarNombreEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CiudadAgregarEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(AgregarCapacityEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(comboequipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(31, 31, 31)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(comboequipo, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(AgregarNombreEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(CiudadAgregarEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(AgregarCapacityEstadio, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(265, 265, 265)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1188,7 +1195,9 @@ public class Examen extends javax.swing.JFrame {
     }//GEN-LAST:event_AgregarNombreEstadioActionPerformed
 
     private void BotonAddEstadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAddEstadioActionPerformed
-        // TODO add your handling code here:
+        String ciudad;
+        String nombre;
+        String capacidad;
     }//GEN-LAST:event_BotonAddEstadioActionPerformed
 
     private void BotonAgregarJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregarJugadorActionPerformed
@@ -1228,7 +1237,7 @@ public class Examen extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField11ActionPerformed
 
     private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jToggleButton5ActionPerformed
 
     private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
@@ -1303,6 +1312,10 @@ public class Examen extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ComboboxEquipoActionPerformed
 
+    private void comboequipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboequipoActionPerformed
+        
+    }//GEN-LAST:event_comboequipoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1337,6 +1350,7 @@ public class Examen extends javax.swing.JFrame {
             }
         });
     }
+    ArrayList<Estadio> Lista = new ArrayList();
     ArrayList<Equipo> Teams = new ArrayList();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField AgregarCapacityEstadio;
