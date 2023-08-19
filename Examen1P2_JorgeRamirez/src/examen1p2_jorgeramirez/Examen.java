@@ -45,21 +45,21 @@ public class Examen extends javax.swing.JFrame {
         PaisAgregarEquipo = new javax.swing.JTextField();
         BotonCrearEquipo = new javax.swing.JToggleButton();
         jPanel1 = new javax.swing.JPanel();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        AgregarEdadJugadores = new javax.swing.JTextField();
+        AgregarNombreDeJugadores = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        AgregarNacionalidadJugador = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        BotonPieIzquierdo = new javax.swing.JRadioButton();
+        ButonPieDerecho = new javax.swing.JRadioButton();
         Caja = new javax.swing.JComboBox<>();
         BotonAgregarJugador = new javax.swing.JToggleButton();
         jLabel15 = new javax.swing.JLabel();
-        jComboBox11 = new javax.swing.JComboBox<>();
+        ComboboxEquipo = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -238,9 +238,9 @@ public class Examen extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Agg team", jPanel3);
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        AgregarNombreDeJugadores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                AgregarNombreDeJugadoresActionPerformed(evt);
             }
         });
 
@@ -262,9 +262,9 @@ public class Examen extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel5.setText("Pie Habil");
 
-        jRadioButton1.setText("Izquierdo");
+        BotonPieIzquierdo.setText("Izquierdo");
 
-        jRadioButton2.setText("Derecho");
+        ButonPieDerecho.setText("Derecho");
 
         BotonAgregarJugador.setText("Agregar Jugador");
         BotonAgregarJugador.addActionListener(new java.awt.event.ActionListener() {
@@ -275,6 +275,12 @@ public class Examen extends javax.swing.JFrame {
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel15.setText("Equipo");
+
+        ComboboxEquipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboboxEquipoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -289,8 +295,8 @@ public class Examen extends javax.swing.JFrame {
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
-                            .addComponent(jTextField4)))
+                            .addComponent(AgregarEdadJugadores, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
+                            .addComponent(AgregarNombreDeJugadores)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -305,19 +311,20 @@ public class Examen extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(Caja, javax.swing.GroupLayout.Alignment.LEADING, 0, 135, Short.MAX_VALUE)
-                                .addComponent(jTextField7, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addComponent(AgregarNacionalidadJugador, javax.swing.GroupLayout.Alignment.LEADING))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(BotonPieIzquierdo, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(ButonPieDerecho, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ComboboxEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(275, 275, 275)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(304, 304, 304)
-                        .addComponent(BotonAgregarJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(236, Short.MAX_VALUE))
+                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 276, Short.MAX_VALUE)
+                .addComponent(BotonAgregarJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(264, 264, 264))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -327,15 +334,15 @@ public class Examen extends javax.swing.JFrame {
                 .addGap(44, 44, 44)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-                    .addComponent(jTextField4))
+                    .addComponent(AgregarNombreDeJugadores))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-                    .addComponent(jTextField3))
+                    .addComponent(AgregarEdadJugadores))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-                    .addComponent(jTextField7))
+                    .addComponent(AgregarNacionalidadJugador))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -344,15 +351,15 @@ public class Examen extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jRadioButton1)
-                        .addComponent(jRadioButton2)))
+                        .addComponent(BotonPieIzquierdo)
+                        .addComponent(ButonPieDerecho)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                    .addComponent(ComboboxEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addComponent(BotonAgregarJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
+                .addGap(57, 57, 57))
         );
 
         jTabbedPane1.addTab("Agg Jug", jPanel1);
@@ -1168,9 +1175,9 @@ public class Examen extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void AgregarNombreDeJugadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarNombreDeJugadoresActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_AgregarNombreDeJugadoresActionPerformed
 
     private void AgregarCapacityEstadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarCapacityEstadioActionPerformed
         // TODO add your handling code here:
@@ -1185,7 +1192,21 @@ public class Examen extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonAddEstadioActionPerformed
 
     private void BotonAgregarJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregarJugadorActionPerformed
-        // TODO add your handling code here:
+        String nombre;
+        String nacionalidad;
+        String edad;
+        nombre = AgregarNombreDeJugadores.getText();
+        edad = AgregarEdadJugadores.getText();
+        nacionalidad = AgregarNacionalidadJugador.getText();
+        String pieHabil = "";
+        int age = Integer.parseInt(edad);
+        if (BotonPieIzquierdo.isSelected()) {
+            pieHabil= "Pie Izquierdo";
+        } else  if (ButonPieDerecho.isSelected()){
+            pieHabil = "Pie Derecho";
+        }
+        int indice = ComboboxEquipo.getSelectedIndex();
+        JOptionPane.showMessageDialog(this, "Jugador agregado. ");
     }//GEN-LAST:event_BotonAgregarJugadorActionPerformed
 
     private void BotonCrearEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCrearEquipoActionPerformed
@@ -1278,6 +1299,10 @@ public class Examen extends javax.swing.JFrame {
         int combobox = comboequipo.getSelectedIndex();
     }//GEN-LAST:event_BotonAddEstadioMouseClicked
 
+    private void ComboboxEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboboxEquipoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComboboxEquipoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1315,16 +1340,21 @@ public class Examen extends javax.swing.JFrame {
     ArrayList<Equipo> Teams = new ArrayList();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField AgregarCapacityEstadio;
+    private javax.swing.JTextField AgregarEdadJugadores;
+    private javax.swing.JTextField AgregarNacionalidadJugador;
+    private javax.swing.JTextField AgregarNombreDeJugadores;
     private javax.swing.JTextField AgregarNombreEstadio;
     private javax.swing.JToggleButton BotonAddEstadio;
     private javax.swing.JToggleButton BotonAgregarJugador;
     private javax.swing.JToggleButton BotonCrearEquipo;
+    private javax.swing.JRadioButton BotonPieIzquierdo;
+    private javax.swing.JRadioButton ButonPieDerecho;
     private javax.swing.JComboBox<String> Caja;
     private javax.swing.JTextField CiudadAgregarEstadio;
+    private javax.swing.JComboBox<String> ComboboxEquipo;
     private javax.swing.JTextField PaisAgregarEquipo;
     private javax.swing.JComboBox<String> comboequipo;
     private javax.swing.JComboBox<String> jComboBox10;
-    private javax.swing.JComboBox<String> jComboBox11;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
@@ -1393,8 +1423,6 @@ public class Examen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JScrollPane jScrollPane1;
@@ -1419,10 +1447,7 @@ public class Examen extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JToggleButton jToggleButton10;
     private javax.swing.JToggleButton jToggleButton11;
