@@ -22,6 +22,36 @@ public class Equipo {
         this.plantilla = new ArrayList<>();
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    public List<Jugador> getPlantilla() {
+        return plantilla;
+    }
+
+    public void setPlantilla(List<Jugador> plantilla) {
+        this.plantilla = plantilla;
+    }
+
+    @Override
+    public String toString() {
+        return "Equipo{" + "nombre=" + nombre + ", pais=" + pais + ", plantilla=" + plantilla + '}';
+    }
+    
+
     public void agregarJugador(Jugador jugador) {
         plantilla.add(jugador);
     }
